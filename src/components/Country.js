@@ -1,23 +1,20 @@
-import React from 'react';
-import Language from './Language';
+import React from 'react'
+import Language from './Language'
 
-const Country = ({entries}) => {
-
+const Country = ({ name, capital, region, flags, languages }) => {
   return (
     <div>
-      {entries.map((country) => {
-        // return console.log(country.name.common)
-        return (
-          <div key={country.name.common}>
-            <h1>{country.name.common}</h1>
-            <p>capital: {country.capital}</p>
-            <p>region: {country.region}</p>
-            <h2>languages</h2>
-            <Language country={country} />
-            <img src={country.flags.svg} alt={"country-flag"} height={"250px"} width={'350px'} />
-          </div>
-        )
-      })}
+      <h1>{name}</h1>
+      <p>capital: {capital}</p>
+      <p>region: {region}</p>
+      <h2>languages</h2>
+      <Language languages={languages}/>
+      <img
+        src={flags.svg}
+        alt={'country-flag'}
+        height={'250px'}
+        width={'350px'}
+      />
     </div>
   )
 }

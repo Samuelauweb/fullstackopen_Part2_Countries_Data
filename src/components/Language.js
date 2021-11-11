@@ -1,11 +1,10 @@
 import React from 'react';
 
-  const Language = ({ country }) => {
-    console.log('omg: ', Object.values(country.languages))
-
+  const Language = ({ languages }) => {
+    console.log('omg: ', Object.values(languages))
     return (
       <ul>
-        {Object.values(country.languages).map((language) => {
+        {Object.values(languages).map((language) => {
           return <li key={language}>{language}</li>
         })}
       </ul>

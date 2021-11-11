@@ -1,7 +1,10 @@
 import React from 'react';
 
-const FilterCountries = ({ searchCountry, handleSearchChange }) => {
-
+const FilterCountries = ({
+  searchCountry,
+  handleSearchChange,
+  handleSubmit,
+}) => {
   return (
     <form>
       find countries{' '}

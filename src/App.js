@@ -6,6 +6,8 @@ import axios from 'axios'
 const App = () => {
   const [countries, setCountries] = useState([])
   const [searchCountry, setSearchCountry] = useState('')
+    const [showCountry, setShowCountry] = useState()
+
 
   useEffect(() => {
     console.log('effect')
@@ -24,7 +26,12 @@ const App = () => {
         handleSearchChange={handleSearchChange}
       />
       <div>
-        <Countries countries={countries} searchCountry={searchCountry} />
+        <Countries
+          countries={countries}
+          searchCountry={searchCountry}
+          showCountry={showCountry}
+          setShowCountry={setShowCountry}
+        />
       </div>
     </div>
   )
